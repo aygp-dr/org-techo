@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Emacs
+        uses: purcell/setup-emacs@master
+        with:
+          version: '29.1'
+
+      - name: Install package-lint
+        run: |
+          emacs --batch \
+            --eval "(require 'package)" \
+            --eval "(push '(\"melpa\" . \"https://melpa.org/packages/\") package-archives)" \
+            --eval "(package-initialize)" \
+            --eval "(package-refresh-contents)" \
+            --eval "(package-install 'package-lint)"
+
+      - name: Run checkdoc
+        run: |
+          emacs --batch -Q \
+            -L . \
+            -l org-techo.el \
+            --eval "(require 'checkdoc)" \
+            --eval "(setq checkdoc-verb-check-experimental-flag nil)" \
+            --eval "(checkdoc-file \"org-techo.el\")"
+
+      - name: Run package-lint
+        run: |
+          emacs --batch \
+            --eval "(require 'package)" \
+            --eval "(push '(\"melpa\" . \"https://melpa.org/packages/\") package-archives)" \
+            --eval "(package-initialize)" \
+            --eval "(require 'package-lint)" \
+            -f package-lint-batch-and-exit org-techo.el
+
+      - name: Byte compile
+        run: |
+          emacs --batch -Q \
+            -L . \
+            --eval "(setq byte-compile-error-on-warn t)" \
+            -f batch-byte-compile org-techo.el
+
+  test:
+    name: Test (Emacs ${{ matrix.emacs }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        emacs: ['27.2', '28.2', '29.1', 'snapshot']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Emacs ${{ matrix.emacs }}
+        uses: purcell/setup-emacs@master
+        with:
+          version: ${{ matrix.emacs }}
+
+      - name: Run tests
+        run: |
+          emacs --batch -Q \
+            -L . \
+            -l ert \
+            -l org-techo.el \
+            -l tests/test-org-techo.el \
+            -f ert-run-tests-batch-and-exit

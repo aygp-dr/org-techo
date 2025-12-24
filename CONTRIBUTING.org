@@ -1,0 +1,221 @@
+#+TITLE: Contributing to org-techo
+#+AUTHOR: jwalsh
+
+Thank you for your interest in contributing to org-techo!
+
+* Getting Started
+
+** Prerequisites
+
+- Emacs 27.1 or later
+- Org-mode 9.5 or later
+- GNU Make (=gmake= on FreeBSD/BSD systems)
+
+** Clone the Repository
+
+#+begin_src bash
+git clone https://github.com/aygp-dr/org-techo.git
+cd org-techo
+#+end_src
+
+** Install Development Dependencies
+
+#+begin_src bash
+gmake install-deps
+#+end_src
+
+* Core Development Tools
+
+** Emacs Lisp Linting
+
+*** package-lint
+
+[[https://github.com/purcell/package-lint][package-lint]] checks for common packaging issues:
+- Missing or malformed headers
+- Incorrect dependency declarations
+- Namespace violations
+
+#+begin_src bash
+gmake package-lint
+#+end_src
+
+*** checkdoc
+
+Built-in Emacs tool for documentation string conventions:
+- First line should be a complete sentence
+- Proper argument references with CAPS
+- Correct punctuation and formatting
+
+#+begin_src bash
+gmake checkdoc
+#+end_src
+
+*** byte-compile
+
+Byte compilation catches many errors:
+- Undefined functions/variables
+- Wrong number of arguments
+- Lexical binding issues
+
+#+begin_src bash
+gmake byte-compile
+#+end_src
+
+** Testing with ERT
+
+[[https://www.gnu.org/software/emacs/manual/html_node/ert/][ERT]] (Emacs Lisp Regression Testing) is the standard testing framework.
+
+*** Running Tests
+
+#+begin_src bash
+# Run all tests
+gmake test
+
+# Run tests with verbose output
+gmake test-verbose
+#+end_src
+
+*** Writing Tests
+
+Tests live in =tests/test-org-techo.el=. Example:
+
+#+begin_src emacs-lisp
+(ert-deftest org-techo-test-example ()
+  "Description of what this test verifies."
+  (should (= 4 (+ 2 2)))
+  (should-not (= 5 (+ 2 2)))
+  (should-error (/ 1 0)))
+#+end_src
+
+*** Test Naming Convention
+
+- Prefix: =org-techo-test-=
+- Descriptive suffix: =-format=, =-empty-input=, =-error-handling=
+
+** All Checks
+
+Run the complete CI pipeline locally:
+
+#+begin_src bash
+gmake ci
+#+end_src
+
+* Code Style Guidelines
+
+** Elisp Conventions
+
+- Use =lexical-binding: t= in all files
+- Prefix all symbols with =org-techo-=
+- Private functions use double dash: =org-techo--private-fn=
+- Docstrings for all public functions
+
+** File Headers
+
+Every =.el= file must have proper headers:
+
+#+begin_src emacs-lisp
+;;; filename.el --- Description -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2025 Author Name
+
+;; Author: Name <email>
+;; Maintainer: Name <email>
+;; Version: X.Y.Z
+;; Package-Requires: ((emacs "27.1"))
+;; Keywords: appropriate, keywords
+;; Homepage: https://github.com/...
+
+;;; Commentary:
+;; Extended description...
+
+;;; Code:
+;; ... code ...
+
+(provide 'filename)
+;;; filename.el ends here
+#+end_src
+
+** Keywords
+
+Use standard Emacs keywords from =finder-known-keywords=:
+- =calendar= - Calendar and time management
+- =convenience= - Convenience features
+- =outlines= - Outline-based modes
+
+* Issue Tracking
+
+This project uses [[https://github.com/steveyegge/beads][beads]] (bd) for issue tracking.
+
+** Quick Reference
+
+| Command | Description |
+|---------+-------------|
+| =bd ready= | Find available work |
+| =bd show <id>= | View issue details |
+| =bd create "title"= | Create new issue |
+| =bd update <id> --status in_progress= | Claim work |
+| =bd close <id>= | Complete work |
+| =bd sync= | Sync with git |
+
+** Workflow
+
+1. Run =bd ready= to find unblocked issues
+2. Claim an issue: =bd update <id> --status in_progress=
+3. Make your changes
+4. Run =gmake ci= to verify
+5. Close the issue: =bd close <id>=
+6. Commit and push
+
+* Commit Guidelines
+
+We follow [[https://www.conventionalcommits.org/][Conventional Commits]]:
+
+| Type | Description |
+|------+-------------|
+| =feat= | New feature |
+| =fix= | Bug fix |
+| =docs= | Documentation only |
+| =style= | Formatting, no code change |
+| =refactor= | Code change, no new feature or fix |
+| =test= | Adding or updating tests |
+| =chore= | Maintenance tasks |
+
+Example:
+
+#+begin_src text
+feat: add weekly review template
+
+Implements org-techo-create-weekly-review to generate
+weekly summary pages with habit statistics.
+#+end_src
+
+* Pull Request Process
+
+1. Fork the repository
+2. Create a feature branch: =git checkout -b feat/my-feature=
+3. Make changes with tests
+4. Run =gmake ci= - all checks must pass
+5. Commit with conventional commit message
+6. Push and create pull request
+
+* Resources
+
+** Emacs Lisp
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/][Emacs Lisp Reference Manual]]
+- [[https://www.gnu.org/software/emacs/manual/html_node/eintr/][An Introduction to Programming in Emacs Lisp]]
+
+** Org Mode
+
+- [[https://orgmode.org/manual/][The Org Manual]]
+- [[https://orgmode.org/worg/][Worg - The Org-Mode Community]]
+
+** Testing
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/ert/][ERT Manual]]
+- [[https://github.com/jorgenschaefer/emacs-buttercup][Buttercup]] (alternative BDD framework)
+
+** Package Development
+
+- [[https://github.com/purcell/package-lint][package-lint]]
+- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Packaging.html][Packaging in Elisp Manual]]
