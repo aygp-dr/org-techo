@@ -1,0 +1,29 @@
+#+TITLE: {DATE} - {DAY}
+#+DATE: {DATE}
+#+STARTUP: overview
+
+* Daily Overview
+** Intentions
+- [ ]
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 |          |
+| 07:00 |          |
+| 08:00 |          |
+
+* Habits
+- [ ] Morning pages
+- [ ] Exercise
+- [ ] Reading
+- [ ] Meditation
+
+* Notes
+
+* Evening Reflection
+** What went well?
+
+** What could be improved?
+
+** Gratitude

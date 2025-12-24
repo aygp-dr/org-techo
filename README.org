@@ -1,0 +1,101 @@
+#+TITLE: org-techo
+#+AUTHOR: jwalsh
+#+DESCRIPTION: Japanese-style planning for Emacs org-mode
+
+[[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
+[[https://www.gnu.org/software/emacs/][https://img.shields.io/badge/Emacs-27.1+-purple.svg]]
+[[https://orgmode.org/][https://img.shields.io/badge/Org-9.5+-green.svg]]
+[[https://github.com/aygp-dr/org-techo/actions][https://img.shields.io/github/actions/workflow/status/aygp-dr/org-techo/test.yml?label=tests]]
+
+* Overview
+
+org-techo brings the philosophy of Japanese paper planners (like Hobonichi Techo) to Emacs org-mode.
+
+** Features
+
+- Daily pages with consistent structure
+- Habit tracking and reflection prompts
+- Time blocking with grid-like precision
+- Minimalist, distraction-free interface
+- Exportable to various formats
+
+* Installation
+
+#+begin_src emacs-lisp
+;; Add to your init.el
+(add-to-list 'load-path "/path/to/org-techo")
+(require 'org-techo)
+
+;; Configure
+(setq org-techo-directory "~/org/techo")
+(setq org-techo-daily-habits
+      '("Morning pages" "Exercise" "Reading" "Meditation"))
+
+;; Keybinding
+(global-set-key (kbd "C-c t") 'org-techo-goto-today)
+#+end_src
+
+** use-package
+
+#+begin_src emacs-lisp
+(use-package org-techo
+  :load-path "/path/to/org-techo"
+  :bind ("C-c t" . org-techo-goto-today)
+  :custom
+  (org-techo-directory "~/org/techo")
+  (org-techo-daily-habits '("Morning pages" "Exercise" "Reading" "Meditation")))
+#+end_src
+
+* Usage
+
+| Command                       | Description                        |
+|-------------------------------+------------------------------------|
+| =M-x org-techo-goto-today=    | Open today's daily page            |
+| =M-x org-techo-create-daily-page= | Create a daily page for any date |
+
+* Architecture
+
+#+begin_src
+┌─────────────────┐
+│  org-techo.el   │
+├────────┬────────┤
+│ Daily  │ Habit  │
+│ Pages  │ Track  │
+├────────┼────────┤
+│ Time   │ Review │
+│ Grid   │ System │
+└────────┴────────┘
+#+end_src
+
+* Philosophy
+
+org-techo embraces the minimalist philosophy of Japanese planning:
+
+- *Ichigo ichie* (一期一会) - One day, one page
+- *Grid-based structure* for precision
+- *Reflection prompts* for mindfulness
+- *Habit tracking* for consistency
+- *Minimal cognitive overhead*
+
+* Development
+
+** Running Tests
+
+#+begin_src shell
+emacs -batch -l ert -l org-techo.el -l tests/test-org-techo.el -f ert-run-tests-batch-and-exit
+#+end_src
+
+** Tangling from org-techo.org
+
+#+begin_src shell
+emacs --batch --eval "(require 'org)" --eval "(org-babel-tangle-file \"org-techo.org\")"
+#+end_src
+
+* Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+* License
+
+GPL-3.0-or-later
+

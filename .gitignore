@@ -1,0 +1,22 @@
+# Emacs
+*~
+\#*\#
+.\#*
+*.elc
+auto-save-list
+tramp
+.org-id-locations
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+test-output/
+*.log
+
+# Byte-compiled
+*.elc
+
+# Personal techo files (user data)
+# techo/
