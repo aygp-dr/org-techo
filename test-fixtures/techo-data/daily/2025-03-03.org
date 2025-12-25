@@ -1,0 +1,53 @@
+#+TITLE: 2025-03-03 - Monday
+#+DATE: 2025-03-03
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Focus on Service mesh migration
+- [ ] Le Petit Prince - Chapter 8
+- [ ] Database Internals (Petrov) - Ch. 4
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 | Morning routine |
+| 07:00 | Yoga: Yin yoga |
+| 08:00 | Commute / Breakfast |
+| 09:00 | Deep work: Legacy system modernization |
+| 10:00 |  |
+| 11:00 | Tech spec writing |
+| 12:00 | Lunch |
+| 13:00 | Mentoring session |
+| 14:00 |  |
+| 15:00 | Design review: project-atlas |
+| 16:00 |  |
+| 17:00 | Wind down / Planning |
+| 18:00 | Dinner |
+| 19:00 | French practice |
+| 20:00 | Reading |
+| 21:00 | Personal time |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [X] Engineering reading
+- [ ] Fiction reading
+- [X] Exercise (yoga/cycling)
+- [X] Code review
+- [X] Deep work block
+
+* Notes
+- Reading: Great plot twist!
+
+* Evening Reflection
+** What went well?
+Made progress on French
+
+** What could be improved?
+More reading time
+
+** Gratitude
+Interesting work

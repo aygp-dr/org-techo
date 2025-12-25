@@ -1,0 +1,54 @@
+#+TITLE: 2025-02-14 - Friday
+#+DATE: 2025-02-14
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Focus on Service mesh migration
+- [ ] Passé composé exercises
+- [ ] Building Microservices (Newman) - Ch. 1
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 | Morning routine |
+| 07:00 | Yoga: Vinyasa class |
+| 08:00 | Commute / Breakfast |
+| 09:00 | Deep work: Distributed consensus implementation |
+| 10:00 |  |
+| 11:00 | Sprint planning |
+| 12:00 | Lunch |
+| 13:00 | Incident postmortem |
+| 14:00 |  |
+| 15:00 | PR review: project-atlas implementation |
+| 16:00 |  |
+| 17:00 | Wind down / Planning |
+| 18:00 | Dinner |
+| 19:00 | French practice |
+| 20:00 | Reading |
+| 21:00 | Personal time |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [ ] Engineering reading
+- [X] Fiction reading
+- [X] Exercise (yoga/cycling)
+- [X] Code review
+- [ ] Deep work block
+
+* Notes
+- Reading: Taking notes on architecture patterns
+- project-atlas: Investigated performance issue
+
+* Evening Reflection
+** What went well?
+Good exercise, feeling energized
+
+** What could be improved?
+Less context switching
+
+** Gratitude
+Supportive team

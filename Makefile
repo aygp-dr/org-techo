@@ -11,7 +11,8 @@ SRC := $(PACKAGE).el
 TEST_DIR := tests
 TESTS := $(wildcard $(TEST_DIR)/*.el)
 
-.PHONY: all clean test lint checkdoc package-lint byte-compile ci help
+.PHONY: all clean test lint checkdoc package-lint byte-compile ci help \
+       test-fixtures fixtures-sample fixtures-full
 
 all: lint test ## Run all checks
 
@@ -108,3 +109,33 @@ install-deps: ## Install development dependencies
 run: ## Start Emacs with org-techo loaded
 	$(EMACS) -Q -L . -l $(SRC) \
 		--eval "(message \"org-techo loaded. Try M-x org-techo-goto-today\")"
+
+# =============================================================================
+# Test Fixtures (L7 Engineer Persona)
+# =============================================================================
+
+FIXTURE_DIR := test-fixtures
+
+fixtures-sample: ## Generate 7-day sample fixtures
+	$(BATCH) -L . \
+		-l $(SRC) \
+		-l $(FIXTURE_DIR)/generate-test-data.el \
+		-f org-techo-test-generate-sample
+
+fixtures-full: ## Generate 90-day full fixtures
+	$(BATCH) -L . \
+		-l $(SRC) \
+		-l $(FIXTURE_DIR)/generate-test-data.el \
+		-f org-techo-test-generate-all
+
+test-fixtures: ## Run fixture validation tests
+	$(BATCH) -L . \
+		-l ert \
+		-l $(SRC) \
+		-l $(FIXTURE_DIR)/generate-test-data.el \
+		-l $(FIXTURE_DIR)/test-fixtures.el \
+		-f ert-run-tests-batch-and-exit
+
+fixtures-clean: ## Clean generated fixtures
+	rm -rf $(FIXTURE_DIR)/techo-sample
+	rm -rf $(FIXTURE_DIR)/techo-data

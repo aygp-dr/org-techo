@@ -1,0 +1,52 @@
+#+TITLE: 2025-03-07 - Friday
+#+DATE: 2025-03-07
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Focus on Distributed consensus implementation
+- [ ] Duolingo streak day 165
+- [ ] Designing Data-Intensive Applications (Kleppmann) - Ch. 11
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 | Morning routine |
+| 07:00 | Yoga: Yin yoga |
+| 08:00 | Commute / Breakfast |
+| 09:00 | Deep work: Service mesh migration |
+| 10:00 |  |
+| 11:00 | Incident postmortem |
+| 12:00 | Lunch |
+| 13:00 | PR review: project-babel implementation |
+| 14:00 |  |
+| 15:00 | Architecture discussion |
+| 16:00 |  |
+| 17:00 | Wind down / Planning |
+| 18:00 | Dinner |
+| 19:00 | French practice |
+| 20:00 | Reading |
+| 21:00 | Personal time |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [X] Engineering reading
+- [ ] Fiction reading
+- [X] Exercise (yoga/cycling)
+- [X] Code review
+- [X] Deep work block
+
+* Notes
+
+* Evening Reflection
+** What went well?
+Solved a tricky bug
+
+** What could be improved?
+Spend less time in meetings
+
+** Gratitude
+Supportive team

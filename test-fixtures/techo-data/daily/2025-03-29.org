@@ -1,0 +1,54 @@
+#+TITLE: 2025-03-29 - Saturday
+#+DATE: 2025-03-29
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Rest and recharge
+- [ ] Anki flashcards review
+- [ ] Neuromancer (Gibson) - 27 pages
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 |  |
+| 07:00 | Sleep in |
+| 08:00 | Breakfast |
+| 09:00 | Cycling: 20km morning ride |
+| 10:00 |  |
+| 11:00 | French practice |
+| 12:00 | Lunch |
+| 13:00 | Personal project / Reading |
+| 14:00 |  |
+| 15:00 |  |
+| 16:00 | Errands / Social |
+| 17:00 |  |
+| 18:00 | Dinner |
+| 19:00 | Reading |
+| 20:00 | Relaxation |
+| 21:00 |  |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [ ] Engineering reading
+- [ ] Fiction reading
+- [X] Exercise (yoga/cycling)
+- [ ] Code review
+- [ ] Deep work block
+
+* Notes
+- Reading: Interesting chapter on distributed systems
+- French: Struggled with subjunctive mood
+
+* Evening Reflection
+** What went well?
+Helpful code review discussion
+
+** What could be improved?
+Better work-life balance
+
+** Gratitude
+Learning opportunities

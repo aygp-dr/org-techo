@@ -1,0 +1,52 @@
+#+TITLE: 2025-02-28 - Friday
+#+DATE: 2025-02-28
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Focus on Legacy system modernization
+- [ ] Duolingo streak day 158
+- [ ] Systems Performance (Gregg) - Ch. 7
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 | Morning routine |
+| 07:00 | Yoga: Power yoga |
+| 08:00 | Commute / Breakfast |
+| 09:00 | Deep work: Service mesh migration |
+| 10:00 |  |
+| 11:00 | Documentation update |
+| 12:00 | Lunch |
+| 13:00 | Tech spec writing |
+| 14:00 |  |
+| 15:00 | Architecture discussion |
+| 16:00 |  |
+| 17:00 | Wind down / Planning |
+| 18:00 | Dinner |
+| 19:00 | French practice |
+| 20:00 | Reading |
+| 21:00 | Personal time |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [X] Engineering reading
+- [X] Fiction reading
+- [X] Exercise (yoga/cycling)
+- [X] Code review
+- [X] Deep work block
+
+* Notes
+
+* Evening Reflection
+** What went well?
+Finished challenging chapter
+
+** What could be improved?
+Better work-life balance
+
+** Gratitude
+Flexible schedule

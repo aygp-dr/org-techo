@@ -1,0 +1,52 @@
+#+TITLE: 2025-03-26 - Wednesday
+#+DATE: 2025-03-26
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Focus on Legacy system modernization
+- [ ] Duolingo streak day 184
+- [ ] Building Microservices (Newman) - Ch. 3
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 | Morning routine |
+| 07:00 | Yoga: Vinyasa class |
+| 08:00 | Commute / Breakfast |
+| 09:00 | Deep work: Service mesh migration |
+| 10:00 |  |
+| 11:00 | PR review: tech-debt implementation |
+| 12:00 | Lunch |
+| 13:00 | PR review: project-atlas implementation |
+| 14:00 |  |
+| 15:00 | Sprint planning |
+| 16:00 |  |
+| 17:00 | Wind down / Planning |
+| 18:00 | Dinner |
+| 19:00 | French practice |
+| 20:00 | Reading |
+| 21:00 | Personal time |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [ ] Engineering reading
+- [X] Fiction reading
+- [ ] Exercise (yoga/cycling)
+- [X] Code review
+- [X] Deep work block
+
+* Notes
+
+* Evening Reflection
+** What went well?
+Helpful code review discussion
+
+** What could be improved?
+Should sleep earlier
+
+** Gratitude
+Supportive team

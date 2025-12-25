@@ -1,0 +1,53 @@
+#+TITLE: 2025-02-12 - Wednesday
+#+DATE: 2025-02-12
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Focus on Distributed consensus implementation
+- [ ] Duolingo streak day 142
+- [ ] The Art of PostgreSQL (Fontaine) - Ch. 10
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 | Morning routine |
+| 07:00 | Yoga: Power yoga |
+| 08:00 | Commute / Breakfast |
+| 09:00 | Deep work: Service mesh migration |
+| 10:00 |  |
+| 11:00 | PR review: project-atlas implementation |
+| 12:00 | Lunch |
+| 13:00 | Architecture discussion |
+| 14:00 |  |
+| 15:00 | Tech spec writing |
+| 16:00 |  |
+| 17:00 | Wind down / Planning |
+| 18:00 | Dinner |
+| 19:00 | French practice |
+| 20:00 | Reading |
+| 21:00 | Personal time |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [X] Engineering reading
+- [X] Fiction reading
+- [X] Exercise (yoga/cycling)
+- [X] Code review
+- [X] Deep work block
+
+* Notes
+- project-atlas: Investigated performance issue
+
+* Evening Reflection
+** What went well?
+Helpful code review discussion
+
+** What could be improved?
+Spend less time in meetings
+
+** Gratitude
+Progress on goals

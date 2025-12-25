@@ -1,0 +1,52 @@
+#+TITLE: 2025-03-23 - Sunday
+#+DATE: 2025-03-23
+#+STARTUP: overview
+#+PROPERTY: PERSONA Alex Chen
+#+PROPERTY: ROLE L7 Staff Engineer
+
+* Daily Overview
+** Intentions
+- [ ] Rest and recharge
+- [ ] Le Petit Prince - Chapter 1
+- [ ] The Three-Body Problem (Liu) - 32 pages
+
+** Time Blocks
+| Time  | Activity |
+|-------+----------|
+| 06:00 |  |
+| 07:00 | Sleep in |
+| 08:00 | Breakfast |
+| 09:00 | Cycling: Recovery ride |
+| 10:00 |  |
+| 11:00 | French practice |
+| 12:00 | Lunch |
+| 13:00 | Personal project / Reading |
+| 14:00 |  |
+| 15:00 |  |
+| 16:00 | Errands / Social |
+| 17:00 |  |
+| 18:00 | Dinner |
+| 19:00 | Reading |
+| 20:00 | Relaxation |
+| 21:00 |  |
+| 22:00 | Sleep |
+
+* Habits
+- [X] French practice (30 min)
+- [X] Engineering reading
+- [X] Fiction reading
+- [ ] Exercise (yoga/cycling)
+- [ ] Code review
+- [ ] Deep work block
+
+* Notes
+
+* Evening Reflection
+** What went well?
+Productive deep work session
+
+** What could be improved?
+Need more focus time
+
+** Gratitude
+Flexible schedule
