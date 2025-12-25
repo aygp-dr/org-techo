@@ -16,8 +16,7 @@ TESTS := $(wildcard $(TEST_DIR)/*.el)
 all: lint test ## Run all checks
 
 help: ## Show this help
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
-		awk 'BEGIN {FS = ":.*?## "}; {printf "  %-15s %s\n", $$1, $$2}'
+	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  %-15s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 # =============================================================================
 # Testing
@@ -79,9 +78,11 @@ ci: lint test ## Run CI pipeline (lint + test)
 
 package: clean ## Create package tarball
 	@mkdir -p dist
-	tar --transform 's,^,$(PACKAGE)-$(VERSION)/,' \
-		-cvzf dist/$(PACKAGE)-$(VERSION).tar.gz \
-		$(SRC) templates/ README.org
+	@mkdir -p dist/$(PACKAGE)-$(VERSION)
+	@cp $(SRC) README.org dist/$(PACKAGE)-$(VERSION)/
+	@cp -r templates dist/$(PACKAGE)-$(VERSION)/
+	@cd dist && tar -cvzf $(PACKAGE)-$(VERSION).tar.gz $(PACKAGE)-$(VERSION)
+	@rm -rf dist/$(PACKAGE)-$(VERSION)
 
 # =============================================================================
 # Cleanup
